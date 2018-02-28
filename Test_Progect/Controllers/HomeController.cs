@@ -7,20 +7,31 @@ using Microsoft.AspNetCore.Mvc;
 using Test_Progect.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Localization;
+using System.Globalization;
+using System.Threading;
 
 namespace Test_Progect.Controllers
 {
+
     public class HomeController : Controller
     {
         UserContext db;
-        public HomeController(UserContext context)
+        private readonly IStringLocalizer<HomeController> _localizer;
+        public HomeController(UserContext context, IStringLocalizer<HomeController> stringLocalizer)
         {
+            _localizer = stringLocalizer;
             db = context;
         }
 
         [Authorize(Roles = "admin, user")]
         public IActionResult Index()
         {
+            ViewData["MyTitle"] = _localizer["TestString"];
             return View(db.Books.ToList());
         }
 
@@ -92,6 +103,28 @@ namespace Test_Progect.Controllers
                 }
             }
             return NotFound();
+        }
+
+        public JsonResult GetBookJson(int id)
+        {
+            return Json( db.Books.Find(id));
+        }
+
+        public JsonResult GetAllBookJson()
+        {
+            return Json( db.Books.ToList());
+        }
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+            );
+
+            return LocalRedirect(returnUrl);
         }
     }
 }

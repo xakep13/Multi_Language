@@ -3,7 +3,6 @@ C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\bin\Debug\netcorea
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\bin\Debug\netcoreapp2.0\Test_Progect.runtimeconfig.dev.json
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\bin\Debug\netcoreapp2.0\Test_Progect.dll
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\bin\Debug\netcoreapp2.0\Test_Progect.pdb
-C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.csprojResolveAssemblyReference.cache
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.Resources.Resource.resources
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.csproj.GenerateResource.Cache
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.csproj.CoreCompileInputs.cache
@@ -11,3 +10,7 @@ C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcorea
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.AssemblyInfo.cs
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.dll
 C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.pdb
+C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\bin\Debug\netcoreapp2.0\en\Test_Progect.resources.dll
+C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.Resources.Resource.en.resources
+C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\en\Test_Progect.resources.dll
+C:\Users\unopcpavilion\Source\Repos\Test_Progect\Test_Progect\obj\Debug\netcoreapp2.0\Test_Progect.csprojResolveAssemblyReference.cache

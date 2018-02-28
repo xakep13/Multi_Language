@@ -61,6 +61,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Автор.
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поле &quot;автор&quot; повинно бути заповнено.
+        /// </summary>
+        public static string AuthorRequired {
+            get {
+                return ResourceManager.GetString("AuthorRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Назад до списку.
+        /// </summary>
+        public static string BackToList {
+            get {
+                return ResourceManager.GetString("BackToList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Книга.
+        /// </summary>
+        public static string Book {
+            get {
+                return ResourceManager.GetString("Book", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Виберіть мову.
         /// </summary>
         public static string ChooseLang {
@@ -75,6 +111,60 @@ namespace Resources {
         public static string ConfirmPassword {
             get {
                 return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Додати нову книгу.
+        /// </summary>
+        public static string CreateNew {
+            get {
+                return ResourceManager.GetString("CreateNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Видалити.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Ви дійсно хочете видалити цю книгу?.
+        /// </summary>
+        public static string DeleteText {
+            get {
+                return ResourceManager.GetString("DeleteText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Перегляд.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Редагувати.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вхід на сайт.
+        /// </summary>
+        public static string Entering {
+            get {
+                return ResourceManager.GetString("Entering", resourceCulture);
             }
         }
         
@@ -97,11 +187,38 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Увійти.
+        ///   Looks up a localized string similar to Головна.
         /// </summary>
-        public static string LogIn {
+        public static string Index {
             get {
-                return ResourceManager.GetString("LogIn", resourceCulture);
+                return ResourceManager.GetString("Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мова.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Логін.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поле &quot;логін&quot; повинно бути заповнено.
+        /// </summary>
+        public static string LoginRequred {
+            get {
+                return ResourceManager.GetString("LoginRequred", resourceCulture);
             }
         }
         
@@ -124,11 +241,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Поле &quot;Ім&apos;я&quot; повинно бути заповнено.
+        ///   Looks up a localized string similar to Поле &quot;ім&apos;я&quot; повинно бути заповнено.
         /// </summary>
-        public static string NameRequred {
+        public static string NameRequired {
             get {
-                return ResourceManager.GetString("NameRequred", resourceCulture);
+                return ResourceManager.GetString("NameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пароль.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поле &quot;пароль&quot; повинно бути заповнено.
+        /// </summary>
+        public static string PasswordRequred {
+            get {
+                return ResourceManager.GetString("PasswordRequred", resourceCulture);
             }
         }
         
@@ -138,6 +273,33 @@ namespace Resources {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Зберегти.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Рік.
+        /// </summary>
+        public static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Поле &quot;рік&quot; повинно бути заповнено.
+        /// </summary>
+        public static string YearRequired {
+            get {
+                return ResourceManager.GetString("YearRequired", resourceCulture);
             }
         }
     }

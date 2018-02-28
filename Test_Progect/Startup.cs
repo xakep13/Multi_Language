@@ -9,6 +9,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Test_Progect.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Razor;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Logging;
 
 namespace Test_Progect
 {
@@ -27,18 +34,41 @@ namespace Test_Progect
             string connection = "Server=(localdb)\\mssqllocaldb;Database=testdb;Trusted_Connection=True;";
             services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
 
+            services.AddApplicationInsightsTelemetry(Configuration);
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                new CultureInfo("en-US"),
+                new CultureInfo("ua-UA")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture(culture: "ua-Ua", uiCulture: "ua-UA");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
+
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
-                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                    options.LoginPath = new PathString("/Account/Login");
                 });
 
-            services.AddMvc();
+            services.AddMvc()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+           
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
+
+
             app.UseDeveloperExceptionPage();
 
             app.UseStaticFiles();
@@ -49,7 +79,8 @@ namespace Test_Progect
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );             
             });
         }
     }

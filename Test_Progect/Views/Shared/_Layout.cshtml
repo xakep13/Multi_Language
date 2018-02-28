@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Resources
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Test_Progect</title>
+    <title>Test_Progect</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -29,20 +31,34 @@
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Test_Progect</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <a asp-area="" asp-controller="Account" asp-action="Logout" class="navbar-brand">@Resource.LogOut</a>
+                }else
+                {
+                    <a asp-area="" asp-controller="Account" asp-action="Login" class="navbar-brand">@Resource.Login</a>
+                    <a asp-area="" asp-controller="Account" asp-action="Register" class="navbar-brand">@Resource.Register</a>
+                }
+
+              
+
             </div>
+
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - Test_Progect</p>
-        </footer>
+            <div class="row">
+                <div class="col-sm-6">
+                   
+                </div>
+                <div class="col-sm-6 text-right">
+                    @await Html.PartialAsync("SelectLanguagePartial")
+                </div>
+            </div>
+        </footer>  
     </div>
 
     <environment include="Development">
@@ -67,5 +83,22 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+    <script type="text/javascript">
+       
+        function myNewFunction(sel) {
+            var url;
+            if (sel.options[sel.selectedIndex].value == "ua") 
+            {
+               url = '?culture=ua-UA';
+            }
+            else url = '?culture=en-US';
+
+            $.ajax({
+                method: 'GET',
+                url: url
+            })
+        }
+        
+    </script>
 </body>
 </html>

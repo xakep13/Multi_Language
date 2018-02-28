@@ -1,13 +1,11 @@
-﻿@model Test_Progect.Models.Book
+﻿@using Resources
+@model Test_Progect.Models.Book
 
-@{
-    ViewData["Title"] = "Details";
-}
 
-<h2>Details</h2>
+<h2>@Resource.Details</h2>
 
 <div>
-    <h4>Book</h4>
+    <h4>@Resource.Book</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -31,6 +29,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="@Resource.Edit" asp-route-id="@Model.Id">@Resource.Edit</a> |
+    <a asp-action="Index">@Resource.BackToList</a>
 </div>

@@ -1,12 +1,9 @@
-﻿@model Test_Progect.Models.Book
+﻿@using Resources
+@model Test_Progect.Models.Book
 
-@{
-    ViewData["Title"] = "Edit";
-}
+<h2>@Resource.Edit</h2>
 
-<h2>Edit</h2>
-
-<h4>Book</h4>
+<h4>@Resource.Book</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,13 +26,13 @@
                 <span asp-validation-for="Year" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="@Resource.Save" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@Resource.BackToList</a>
 </div>
 

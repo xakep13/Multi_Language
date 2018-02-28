@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CustomLocalizer.cs" />
+    <Compile Remove="LanguageRouteConstraint.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_SelectLanguagePartial.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\Controllers.HomeController.en-US.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Localization.AspNetCore.TagHelpers" Version="0.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
@@ -22,10 +36,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Controllers.HomeController.ua-UA.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Resource.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Resource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

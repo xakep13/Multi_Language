@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "1d9d19401c32d7d11292df61ff8d54397bf121b1"
+    "signature": "cec1e59dfe6465ec74ca1f0b189264c0cfa8c6a8"
   },
   "compilationOptions": {
     "defines": [
@@ -23,12 +23,18 @@
     ".NETCoreApp,Version=v2.0": {
       "Test_Progect/1.0.0": {
         "dependencies": {
+          "Localization.AspNetCore.TagHelpers": "0.3.0",
           "Microsoft.AspNetCore.All": "2.0.5",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.0"
         },
         "runtime": {
           "Test_Progect.dll": {}
+        },
+        "resources": {
+          "en/Test_Progect.resources.dll": {
+            "locale": "en"
+          }
         },
         "compile": {
           "Test_Progect.dll": {}
@@ -71,6 +77,19 @@
             "rid": "win-x86",
             "assetType": "native"
           }
+        }
+      },
+      "Localization.AspNetCore.TagHelpers/0.3.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Localization": "2.0.2",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.0.1",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6.1/Localization.AspNetCore.TagHelpers.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6.1/Localization.AspNetCore.TagHelpers.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.4.0": {
@@ -4244,6 +4263,13 @@
       "sha512": "sha512-GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "path": "libuv/1.10.0",
       "hashPath": "libuv.1.10.0.nupkg.sha512"
+    },
+    "Localization.AspNetCore.TagHelpers/0.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-spG/0NEWU/gNMo8P/V5wfDJUkx6pWENDLM2wCpmsI07eyWci/gL/DlOFdwp0Xln6eNWDFa0/xgikIYsdextb2A==",
+      "path": "localization.aspnetcore.taghelpers/0.3.0",
+      "hashPath": "localization.aspnetcore.taghelpers.0.3.0.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights/2.4.0": {
       "type": "package",
